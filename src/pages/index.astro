@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Navigation } from '../components/Navigation/Navigation';
+import { Hero } from '../components/Hero/Hero';
+import { Services } from '../components/Services/Services';
+import { About } from '../components/About/About';
+import { Testimonials } from '../components/Testimonials/Testimonials';
+import { Contact } from '../components/Contact/Contact';
+import { Footer } from '../components/Footer/Footer';
+---
+
+<Layout>
+  <Navigation client:load />
+  <main>
+    <Hero client:visible />
+    <Services client:visible />
+    <About client:visible />
+    <Testimonials client:visible />
+    <Contact client:visible />
+  </main>
+  <Footer />
+</Layout>
