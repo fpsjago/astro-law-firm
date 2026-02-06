@@ -8,9 +8,35 @@
   transition: all var(--transition-base);
 }
 
+/* Light text when over dark hero */
+.header:not(.scrolled) .logo,
+.header:not(.scrolled) .navLink,
+.header:not(.scrolled) .phone {
+  color: var(--color-text-light);
+}
+
+.header:not(.scrolled) .logoTagline {
+  color: var(--color-text-light-muted);
+}
+
+.header:not(.scrolled) .navLink:hover {
+  color: var(--color-accent);
+}
+
 .scrolled {
   background: var(--color-surface-elevated);
   box-shadow: var(--shadow-md);
+}
+
+/* Dark text when scrolled (white bg) */
+.scrolled .logo,
+.scrolled .navLink,
+.scrolled .phone {
+  color: var(--color-primary);
+}
+
+.scrolled .logoTagline {
+  color: var(--color-text-muted);
 }
 
 .nav {
